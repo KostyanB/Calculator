@@ -1,0 +1,57 @@
+/*тело калькулятора*/
+.calc {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px auto;
+    @media (max-width: 768px), (max-height: 768px) {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        background: rgb(58, 119, 209);
+
+    }
+
+    &__substrate {
+        width: 616px;
+        height: 876px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: rgba(255, 255, 255, .2);
+        backdrop-filter: blur(4px);
+        border-radius: 18px;
+        padding: 36px 31px;
+        @media (max-width: 768px), (max-height: 768px) {
+            border-radius: 0;
+            width: 100%;
+            height: 100%;
+            padding: 18px 15px
+
+        }
+    }
+
+    &__body {
+        width: 100%;
+        height: 100%;
+        // width: 554px;
+        // height: 800px;
+        background: linear-gradient(155.23deg, #28518E 0%, #3975d0 100%);
+        box-shadow: 0px 82px 158px rgba(0, 0, 0, 0.35), 0px 24.7206px 47.6324px rgba(0, 0, 0, 0.228056), 0px 10.2677px 19.7841px rgba(0, 0, 0, 0.175), 0px 3.71362px 7.1555px rgba(0, 0, 0, 0.121944);
+        border-radius: 18px;
+        padding: 20px 45px 50px 45px;
+        @media (max-width: 768px), (max-height: 768px) {
+            border: none;
+            padding: 10px 20px;
+        }
+
+    }
+
+    &__inputs-wrapper {
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-rows: 22% 13% 65%;
+        overflow: hidden;
+    }
+}

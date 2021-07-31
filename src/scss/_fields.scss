@@ -1,0 +1,82 @@
+/* поля */
+.calc-fields__result {
+    font: {
+        weight: 800;
+        size: 56px;
+    }
+
+    justify-self: end;
+    align-self: center;
+    text-align: end;
+
+    @media (max-width: 576px),
+    (max-height: 768px) {
+        font: {
+            weight: 600;
+            size: 40px;
+        }
+    }
+}
+
+/*поле входных данных*/
+.calc-fields__income {
+    justify-self: end;
+    align-self: end;
+    text-align: end;
+    font-size: 24px;
+    line-height: 32px;
+    word-break: break-all;
+
+    &__user-data {
+        min-height: 36px;
+        outline: none;
+    }
+
+    @media (max-width: 768px),
+    (max-height: 768px) {}
+}
+
+/*поле кнопок*/
+.calc-fields__buttons {
+    border-top: 3px solid rgba(255, 255, 255, .35);
+    padding-top: 15px;
+    display: grid;
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+
+    justify-items: center;
+    align-items: center;
+
+    &_button {
+        width: 80px;
+        height: 80px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        border-radius: 40px;
+        font-size: 36px;
+
+        &:hover {
+            background: rgba(255, 255, 255, 0.068);
+        }
+
+        @media (max-width: 576px),
+        (max-height: 768px) {
+            width: 60px;
+            height: 60px;
+            font-size: 30px;
+            border-radius: 30px;
+        }
+
+    }
+}
+
+#btn-result {
+    background: rgba(255, 255, 255, 1);
+    color: rgba(43, 88, 154, 1);
+
+    &:hover {
+        background: rgba(34, 228, 131, 0.849);
+    }
+}

@@ -1,0 +1,274 @@
+@charset "UTF-8";
+/* обнуление */
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*, *::before, *::after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input:-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/* ------------------------*/
+/* шрифты*/
+@font-face {
+  font-family: 'Geometria';
+  src: local("Geometria Bold"), local("GeometriaBold"), url("../fonts/Geometria-Bold.woff2") format("woff2"), url("../fonts/Geometria-Bold.woff") format("woff");
+  font-weight: 800;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Geometria';
+  src: local("Geometria"), local("GeometriaRegular"), url("../fonts/Geometria-Regular.woff2") format("woff2"), url("../fonts/Geometria-Regular.woff") format("woff");
+  font-weight: normal;
+  font-display: swap;
+}
+
+body {
+  font-family: Geometria;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 36px;
+  color: #F2F2F2;
+  background: -webkit-linear-gradient(327.24deg, #FFA2A2 4.09%, #FF7B7B 91.04%);
+  background: -o-linear-gradient(327.24deg, #FFA2A2 4.09%, #FF7B7B 91.04%);
+  background: linear-gradient(122.76deg, #FFA2A2 4.09%, #FF7B7B 91.04%);
+}
+
+/*тело калькулятора*/
+.calc {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 30px auto;
+}
+
+@media (max-width: 768px), (max-height: 768px) {
+  .calc {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    background: #3a77d1;
+  }
+}
+
+.calc__substrate {
+  width: 616px;
+  height: 876px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: rgba(255, 255, 255, 0.2);
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
+  border-radius: 18px;
+  padding: 36px 31px;
+}
+
+@media (max-width: 768px), (max-height: 768px) {
+  .calc__substrate {
+    border-radius: 0;
+    width: 100%;
+    height: 100%;
+    padding: 18px 15px;
+  }
+}
+
+.calc__body {
+  width: 100%;
+  height: 100%;
+  background: -webkit-linear-gradient(294.77deg, #28518E 0%, #3975d0 100%);
+  background: -o-linear-gradient(294.77deg, #28518E 0%, #3975d0 100%);
+  background: linear-gradient(155.23deg, #28518E 0%, #3975d0 100%);
+  -webkit-box-shadow: 0px 82px 158px rgba(0, 0, 0, 0.35), 0px 24.7206px 47.6324px rgba(0, 0, 0, 0.228056), 0px 10.2677px 19.7841px rgba(0, 0, 0, 0.175), 0px 3.71362px 7.1555px rgba(0, 0, 0, 0.121944);
+          box-shadow: 0px 82px 158px rgba(0, 0, 0, 0.35), 0px 24.7206px 47.6324px rgba(0, 0, 0, 0.228056), 0px 10.2677px 19.7841px rgba(0, 0, 0, 0.175), 0px 3.71362px 7.1555px rgba(0, 0, 0, 0.121944);
+  border-radius: 18px;
+  padding: 20px 45px 50px 45px;
+}
+
+@media (max-width: 768px), (max-height: 768px) {
+  .calc__body {
+    border: none;
+    padding: 10px 20px;
+  }
+}
+
+.calc__inputs-wrapper {
+  width: 100%;
+  height: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 22% 13% 65%;
+      grid-template-rows: 22% 13% 65%;
+  overflow: hidden;
+}
+
+/* поля */
+.calc-fields__result {
+  font-weight: 800;
+  font-size: 56px;
+  -ms-grid-column-align: end;
+      justify-self: end;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  text-align: end;
+}
+
+@media (max-width: 576px), (max-height: 768px) {
+  .calc-fields__result {
+    font-weight: 600;
+    font-size: 40px;
+  }
+}
+
+/*поле входных данных*/
+.calc-fields__income {
+  -ms-grid-column-align: end;
+      justify-self: end;
+  -ms-flex-item-align: end;
+      -ms-grid-row-align: end;
+      align-self: end;
+  text-align: end;
+  font-size: 24px;
+  line-height: 32px;
+  word-break: break-all;
+}
+
+.calc-fields__income__user-data {
+  min-height: 36px;
+  outline: none;
+}
+
+/*поле кнопок*/
+.calc-fields__buttons {
+  border-top: 3px solid rgba(255, 255, 255, 0.35);
+  padding-top: 15px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: (1fr)[5];
+      grid-template-rows: repeat(5, 1fr);
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  justify-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.calc-fields__buttons_button {
+  width: 80px;
+  height: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+  border-radius: 40px;
+  font-size: 36px;
+}
+
+.calc-fields__buttons_button:hover {
+  background: rgba(255, 255, 255, 0.068);
+}
+
+@media (max-width: 576px), (max-height: 768px) {
+  .calc-fields__buttons_button {
+    width: 60px;
+    height: 60px;
+    font-size: 30px;
+    border-radius: 30px;
+  }
+}
+
+#btn-result {
+  background: white;
+  color: #2b589a;
+}
+
+#btn-result:hover {
+  background: rgba(34, 228, 131, 0.849);
+}
