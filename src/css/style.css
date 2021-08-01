@@ -78,14 +78,14 @@ h1, h2, h3, h4, h5, h6 {
 /* шрифты*/
 @font-face {
   font-family: 'Geometria';
-  src: local("Geometria Bold"), local("GeometriaBold"), url("../fonts/Geometria-Bold.woff2") format("woff2"), url("../fonts/Geometria-Bold.woff") format("woff");
+  src: local("Geometria Bold"), local("GeometriaBold"), url("fonts/Geometria-Bold.woff2") format("woff2"), url("fonts/Geometria-Bold.woff") format("woff");
   font-weight: 800;
   font-display: swap;
 }
 
 @font-face {
   font-family: 'Geometria';
-  src: local("Geometria"), local("GeometriaRegular"), url("../fonts/Geometria-Regular.woff2") format("woff2"), url("../fonts/Geometria-Regular.woff") format("woff");
+  src: local("Geometria"), local("GeometriaRegular"), url("fonts/Geometria-Regular.woff2") format("woff2"), url("fonts/Geometria-Regular.woff") format("woff");
   font-weight: normal;
   font-display: swap;
 }
@@ -228,12 +228,12 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-      grid-template-areas: "reboot del percent divide" "seven eith nine multipl" "four five six substr" "one two three addit" "dblzero onezero point result";
+      grid-template-areas: "reboot del bracket divide" "seven eith nine multipl" "four five six substr" "one two three addit" "dblzero onezero point result";
 }
 
 @media (max-height: 576px) {
   .calc-fields__buttons {
-        grid-template-areas: "seven eith nine percent reboot" "four five six multipl substr" "one two three divide addit" "dblzero onezero point del result";
+        grid-template-areas: "seven eith nine bracket reboot" "four five six multipl substr" "one two three divide addit" "dblzero onezero point del result";
   }
 }
 
@@ -302,10 +302,10 @@ body {
   grid-area: del;
 }
 
-#btn-percent {
+#btn-bracket {
   -ms-grid-row: 1;
   -ms-grid-column: 3;
-  grid-area: percent;
+  grid-area: bracket;
 }
 
 #btn-divide {

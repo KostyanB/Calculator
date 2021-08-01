@@ -46,7 +46,7 @@
     justify-items: center;
     align-items: center;
     grid-template-areas:
-        "reboot del percent divide"
+        "reboot del bracket divide"
         "seven eith nine multipl"
         "four five six substr"
         "one two three addit"
@@ -56,7 +56,7 @@
         // grid-template-rows: repeat(4, 1fr);
         // grid-template-columns: repeat(5, 1fr);
         grid-template-areas:
-            "seven eith nine percent reboot"
+            "seven eith nine bracket reboot"
             "four five six multipl substr"
             "one two three divide addit"
             "dblzero onezero point del result"
@@ -113,8 +113,8 @@
 #btn-del {
     grid-area: del;
 }
-#btn-percent {
-    grid-area: percent;
+#btn-bracket {
+    grid-area: bracket;
 }
 #btn-divide {
     grid-area: divide;
