@@ -38,7 +38,7 @@ const handleInputs = () => {
 		const target = e.target;
 		//*добавить символы
 		target.classList.contains('button-number') && addSymbol(target.dataset.sym);
-        target.classList.contains('button-operand') && addSymbol(` ${target.dataset.sym} `);
+        target.classList.contains('button-operand') && addSymbol(target.dataset.sym);
 		target.matches('#btn-point') && addSymbol('.');
 		target.matches('#btn-bracket') && toggleBracket();
 		//*управление
@@ -50,7 +50,7 @@ const handleInputs = () => {
 	addEventListener('keyup', e => {
 		//*добавить символы
 		(e.key >= '0' && e.key <= '9') && addSymbol(e.key);
-		['+', '-', '*', '/', '(', ')'].includes(e.key) && addSymbol(` ${e.key} `);
+		['+', '-', '*', '/', '(', ')'].includes(e.key) && addSymbol(e.key);
 		['.', ','].includes(e.key) && addSymbol('.');
 		// ['(', ')'].includes(e.key) && toggleBracket()
 		//*управление

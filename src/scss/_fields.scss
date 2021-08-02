@@ -9,8 +9,7 @@
     align-self: center;
     text-align: end;
 
-    @media (max-width: 576px),
-    (max-height: 768px) {
+    @media (max-width: 576px), (max-height: 576px) {
         font: {
             weight: 600;
             size: 40px;
@@ -26,14 +25,6 @@
     font-size: 24px;
     line-height: 32px;
     word-break: break-all;
-
-    &__user-data {
-        min-height: 36px;
-        outline: none;
-    }
-
-    @media (max-width: 768px),
-    (max-height: 768px) {}
 }
 
 /*поле кнопок*/
@@ -50,7 +41,7 @@
         "seven eith nine multipl"
         "four five six substr"
         "one two three addit"
-        "dblzero onezero point result"
+        "dblzero onezero pointe result"
     ;
     @media (max-height: 576px) {
         // grid-template-rows: repeat(4, 1fr);
@@ -59,24 +50,26 @@
             "seven eith nine bracket reboot"
             "four five six multipl substr"
             "one two three divide addit"
-            "dblzero onezero point del result"
+            "dblzero onezero pointe del result"
         ;
     }
 
     &_button {
-        width: 80px;
-        height: 80px;
         display: flex;
         justify-content: center;
         align-items: center;
         cursor: pointer;
-        border-radius: 40px;
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        background: transparent;
+        outline: none;
+        -webkit-tap-highlight-color: transparent;
         font-size: 36px;
         line-height: 36px;
         color:rgba(255, 255, 255, 1);
-        background: transparent;
 
-        &:hover {
+        &:active {
             background: rgba(255, 255, 255, 0.068);
         }
 
@@ -86,16 +79,13 @@
             height: 60px;
             font-size: 30px;
             line-height: 30px;
-            border-radius: 30px;
         }
         @media (max-height: 576px) {
             width: 40px;
             height: 40px;
             font-size: 24px;
             line-height: 24px;
-            border-radius: 20px;
         }
-
     }
 }
 
@@ -103,67 +93,7 @@
     background: rgba(255, 255, 255, 1);
     color: rgba(43, 88, 154, 1);
 
-    &:hover {
+    &:active {
         background: rgba(34, 228, 131, 0.849);
     }
-}
-#btn-reset {
-    grid-area: reboot;
-}
-#btn-del {
-    grid-area: del;
-}
-#btn-bracket {
-    grid-area: bracket;
-}
-#btn-divide {
-    grid-area: divide;
-}
-#btn-seven {
-    grid-area: seven;
-}
-#btn-eith {
-    grid-area: eith;
-}
-#btn-nine {
-    grid-area: nine;
-}
-#btn-multipl {
-    grid-area: multipl;
-}
-#btn-four {
-    grid-area: four;
-}
-#btn-five {
-    grid-area: five;
-}
-#btn-six {
-    grid-area: six;
-}
-#btn-substr {
-    grid-area: substr;
-}
-#btn-one {
-    grid-area: one;
-}
-#btn-two {
-    grid-area: two;
-}
-#btn-three {
-    grid-area: three;
-}
-#btn-addit {
-    grid-area: addit;
-}
-#btn-dblzero {
-    grid-area: dblzero;
-}
-#btn-zero {
-    grid-area: onezero;
-}
-#btn-point {
-    grid-area: point;
-}
-#btn-result {
-    grid-area: result;
 }

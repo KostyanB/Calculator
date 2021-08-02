@@ -112,7 +112,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: 30px auto;
+  margin: 3vh auto 3vh;
 }
 
 @media (max-width: 768px), (max-height: 768px) {
@@ -193,7 +193,7 @@ body {
   text-align: end;
 }
 
-@media (max-width: 576px), (max-height: 768px) {
+@media (max-width: 576px), (max-height: 576px) {
   .calc-fields__result {
     font-weight: 600;
     font-size: 40px;
@@ -213,11 +213,6 @@ body {
   word-break: break-all;
 }
 
-.calc-fields__income__user-data {
-  min-height: 36px;
-  outline: none;
-}
-
 /*поле кнопок*/
 .calc-fields__buttons {
   border-top: 3px solid rgba(255, 255, 255, 0.35);
@@ -228,18 +223,16 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-      grid-template-areas: "reboot del bracket divide" "seven eith nine multipl" "four five six substr" "one two three addit" "dblzero onezero point result";
+      grid-template-areas: "reboot del bracket divide" "seven eith nine multipl" "four five six substr" "one two three addit" "dblzero onezero pointe result";
 }
 
 @media (max-height: 576px) {
   .calc-fields__buttons {
-        grid-template-areas: "seven eith nine bracket reboot" "four five six multipl substr" "one two three divide addit" "dblzero onezero point del result";
+        grid-template-areas: "seven eith nine bracket reboot" "four five six multipl substr" "one two three divide addit" "dblzero onezero pointe del result";
   }
 }
 
 .calc-fields__buttons_button {
-  width: 80px;
-  height: 80px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -250,14 +243,18 @@ body {
       -ms-flex-align: center;
           align-items: center;
   cursor: pointer;
-  border-radius: 40px;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: transparent;
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
   font-size: 36px;
   line-height: 36px;
   color: white;
-  background: transparent;
 }
 
-.calc-fields__buttons_button:hover {
+.calc-fields__buttons_button:active {
   background: rgba(255, 255, 255, 0.068);
 }
 
@@ -267,7 +264,6 @@ body {
     height: 60px;
     font-size: 30px;
     line-height: 30px;
-    border-radius: 30px;
   }
 }
 
@@ -277,7 +273,6 @@ body {
     height: 40px;
     font-size: 24px;
     line-height: 24px;
-    border-radius: 20px;
   }
 }
 
@@ -286,7 +281,7 @@ body {
   color: #2b589a;
 }
 
-#btn-result:hover {
+#btn-result:active {
   background: rgba(34, 228, 131, 0.849);
 }
 
@@ -401,7 +396,7 @@ body {
 #btn-point {
   -ms-grid-row: 5;
   -ms-grid-column: 3;
-  grid-area: point;
+  grid-area: pointe;
 }
 
 #btn-result {
