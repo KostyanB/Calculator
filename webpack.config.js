@@ -30,20 +30,6 @@ module.exports = {
 				collapseWhitespace: !isDev,
 			}
 		}),
-		// new HTMLWebpackPlugin({
-		//     filename: 'mozaika.html',
-		// 	template: './src/mozaika.html',
-		// 	minify: {
-		// 		collapseWhitespace: !isDev,
-		// 	}
-		// }),
-		// new HTMLWebpackPlugin({
-		//     filename: 'schelkovo.html',
-		// 	template:'./src/schelkovo.html',
-		// 	minify: {
-		// 		collapseWhitespace: !isDev,
-		// 	}
-		// }),
 		new CopyPlugin({
 			patterns: [
 				{ from: "./src/images", to: "images" },
