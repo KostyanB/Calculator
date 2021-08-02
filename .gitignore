@@ -4,6 +4,9 @@
 /.vscode/
 /plugins/
 /.firebase/
+.firebaserc
+firebase.json
+
 
 package-lock.json
 read_me.txt

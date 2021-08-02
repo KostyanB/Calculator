@@ -18,7 +18,7 @@ const handleInputs = () => {
 
 	let mark = true;
 	const toggleBracket = () => {
-		(mark) ? addSymbol(' ( ') : addSymbol(' ) ');
+		(mark) ? addSymbol('(') : addSymbol(')');
 		mark = !mark
 	};
 
